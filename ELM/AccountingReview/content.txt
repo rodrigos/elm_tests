@@ -1,0 +1,6 @@
+!*** Open Tasks for Accounting Review
+| script |
+| login with role | role.elm_accounting_owner |
+| Accounting Review | Automated Test  | Systemofrecord | Excel | Reportingcurrency | US Dollar | Administratorpoc | $randString | Comment | Accounting Review (Automated Test) |
+***!
+

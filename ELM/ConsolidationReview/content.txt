@@ -1,0 +1,6 @@
+!*** Open Tasks for Consolidation Review
+| script |
+| login with role | role.elm_consolidation_reviewer |
+| Consolidation Review |  Automated Test | Consolidation | Yes - Phase 1 | Amendedagreement | Yes | Comment | Consolidation Review (Automated Test) |
+***!
+

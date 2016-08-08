@@ -1,0 +1,8 @@
+!*** Open Tasks for Tax Review
+| script |
+| login with role | role.elm_tax_approver |
+| Tax Review and Sign-Off | Automated Test | Assignmentrequired | Yes | Siloassignment | Silo 1 | Silorationale | $randString | Taxhierarchy | Not Applicable | Taxclassificationcountry | Corporation | Taxclassificationdefault | Corporation | Taxclassificationintended | Corporation | Comment | Tax Review and Sign-Off (Automated Test) |
+***!
+
+
+

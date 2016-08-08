@@ -1,0 +1,7 @@
+!*** Open Tasks for Post Formation Documents
+| script |
+| login with role | role.elm_legal_compliance_reviewer |
+| Legal Compliance Review |  Formation Document | Comment | Legal Compliance Review - Formation Document (Automated Test) |
+| Legal Compliance Review Task Assigned |  Operating Agreement | Comment | Legal Compliance Review - Operating Agreement (Automated Test) |
+***!
+

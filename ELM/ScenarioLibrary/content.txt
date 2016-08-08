@@ -1,0 +1,138 @@
+!*** Scenario - Create New Legal Entity  
+| scenario | Create New Legal Entity | legalEntityName |
+| click on menu | Actions |
+| click on action | Request New Legal Entity |
+| check | get form title | Request New Legal Entity |
+| populate field | Legal Entity Name | with | @legalEntityName |
+| populate field | Jurisdiction | with |US-VA|
+| populate field | Segment | with | Real Assets |
+| populate field | Sub-Segment | with | US Real Estate |
+| populate field | Category | with | Firm |
+| populate field | Sub-Category | with | General Partner of a Fund |
+| populate field | Business Purpose | with | Automated test for ELM |
+| populate field | Primary Fund | with | Carlyle Europe Real Estate Partners |
+| populate field | [1] | in section | Comments | with | Request by a requestor of Real Assets |
+| click on button|Submit for Approval|
+***!
+
+!*** Scenario - Approve New Legal Entity 
+| scenario | Approve New Legal Entity | Task | text | Comment |
+| click on menu | Tasks |
+| verify task | @Task | is present |
+| click on task | @Task |
+| click on button | Accept |
+| populate field | [1] | in section | Review Comments | with | @Comment |
+| click on button | Approve |
+| click on button | Yes |
+***!
+
+!*** Scenario Add Formation Documents
+| scenario | Add Formation Documents | Filevar | Comment | Commentvar |
+| verify field | Document | is present |
+| populate field | [12] | with | Formation Document |
+| populate field | Upload File | with | @Filevar |
+| populate field | Execution Date | with | +$randDate days|
+| populate field | Effective Date | with | +$randDate days |
+| populate field | Formation Date | with | +$randDate days |
+| populate field | File # | with | $randInt |
+| populate field | [1] | in section | Comments | with | @Commentvar |
+***!
+
+!*** Scenario Add Formation Documents (Operating Agreement)
+| scenario | Add Formation Documents - Operating Agreement | Filevar | Comment | Commentvar |
+| verify field | Document | is present |
+| populate field | [12] | with | Operating Agreement |
+| populate field | Upload File | with | @Filevar |
+| populate field | Execution Date | with | +$randDate days|
+| populate field | Effective Date | with | +$randDate days |
+| populate field | Registered Agent | with | CT Corporation |
+| populate field | [1] | in section | Comments | with | @Commentvar |
+***!
+
+!*** Scenario - Legal Compliance Review 
+| scenario | Legal Compliance Review | Task | Comment | Commentvar |
+| click on menu | Tasks |
+| verify task | @Task | is present |
+| click on task | @Task |
+| click on button | Accept |
+| populate field | [1] | in section | Comments | with | @Commentvar |
+| click on button| Complete Review |
+| click on button | Yes |
+***!
+
+!*** Scenario - Legal Compliance Review Task Assigned
+| scenario | Legal Compliance Review Task Assigned| Task | Comment | Commentvar |
+| click on menu | Tasks |
+| verify task | @Task | is present |
+| click on task | @Task |
+| populate field | [1] | in section | Comments | with | @Commentvar |
+| click on button| Complete Review |
+| click on button | Yes |
+***!
+
+!*** Scenario - Entity Compliance Review
+| scenario | Entity Compliance Review| Task | Comment | Commentvar |
+| click on menu | Tasks |
+| verify task | @Task | is present |
+| click on task | @Task |
+| click on button | Accept |
+| populate field | [1] | in section | Comments | with | @Commentvar |
+| click on button| Submit |
+| click on button | Yes |
+***!
+
+!*** Scenario - Consolidation Review
+| scenario | Consolidation Review| Task | Consolidation | Consolidationvar | Amendedagreement | Amendedagreementvar |Comment | Commentvar |
+| click on menu | Tasks |
+| verify task | @Task | is present |
+| click on task | @Task |
+| click on button | Accept |
+| populate field | Include in US GAAP Consolidation | with | @Consolidationvar |
+| populate field | Hyperion Grouping | with | $randString |
+| populate field | Expect Amended & Restated Agreement | with | @Amendedagreementvar |
+| populate field | Consolidation Conclusion Comment | with | @Commentvar |
+| populate field | [1] | in section | Comments | with | @Commentvar |
+| click on button| Complete Review |
+***!
+
+!*** Scenario - Accounting Review
+| scenario | Accounting Review| Task | Systemofrecord | Systemofrecordvar | Reportingcurrency | Reportingcurrencyvar | Administratorpoc | Administratorpocvar | Comment | Commentvar |
+| click on menu | Tasks |
+| verify task | @Task | is present |
+| click on task | @Task |
+| click on button | Accept |
+| populate field | Accounting System of Record | with | @Systemofrecordvar |
+| populate field | Reporting Currency | with | @Reportingcurrencyvar|
+| populate field | Accounting Administrator POC | with | @Administratorpocvar|
+| populate field | [1] | in section | Comments | with | @Commentvar |
+| click on button| Complete Review |
+***!
+
+!*** Scenario - Tax Review and Sign-Off
+| scenario | Tax Review and Sign-Off | Task | Assignmentrequired | Assignmentrequiredvar | Siloassignment | Siloassignmentvar | Silorationale | Silorationalevar | Taxhierarchy | Taxhierarchyvar | Taxclassificationcountry | Taxclassificationcountryvar | Taxclassificationdefault | Taxclassificationdefaultvar | Taxclassificationintended | Taxclassificationintendedvar | Comment | Commentvar |
+| click on menu | Tasks |
+| verify task | @Task | is present |
+| click on task | @Task |
+| click on button | Accept |
+| populate field | Is Silo Assignment Required? | with | @Assignmentrequiredvar |
+| populate field | Silo Assignment | with | @Siloassignmentvar|
+| populate field | Silo Rationale | with | @Silorationalevar|
+| populate field | Tax Hierarchy for Hyperion | with | @Taxhierarchyvar |
+| populate field | Tax Classification in Country of Formation | with | @Taxclassificationcountryvar |
+| populate field | Tax Classification (US Default) | with | @Taxclassificationdefaultvar |
+| populate field | Tax Classification (US Intended) | with | @Taxclassificationintendedvar |
+| populate field | [1] | in section | Comments | with | @Commentvar |
+| click on button | Submit |
+| click on button | Yes |
+***!
+
+!*** Scenario - Review Tax Silo Selection
+| scenario | Review Tax Silo Selection | Task | Comment | Commentvar |
+| click on menu | Tasks |
+| verify task | @Task | is present |
+| click on task | @Task |
+| click on button | Accept |
+| populate field | [1] | in section | Comments | with | @Commentvar |
+| click on button| Submit |
+| click on button | Yes |
+***!

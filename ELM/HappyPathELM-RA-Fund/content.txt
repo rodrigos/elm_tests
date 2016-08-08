@@ -1,0 +1,63 @@
+!*** Login information
+| script                                                          |
+|login with username|elm.requestor.ra|and password|Carlyle1|
+***!
+
+!*** Open Actions
+| script |
+| click on menu | Actions |
+| click on action | Request New Legal Entity |
+*!
+
+!*** Verify Page Title
+| script |
+| check | get form title | Request New Legal Entity |
+*!
+
+!*** Input Data
+| script |
+| populate field | Legal Entity Name | with | Legal Entity $randString - Automated Test  |
+| populate field | Jurisdiction | with | US-VA - Virginia |
+| populate field | Segment | with | Real Assets |
+| populate field | Sub-Segment | with | US Real Estate |
+| populate field | Category | with | Fund |
+| populate field | Sub-Category | with | Main Fund Limited Partnership |
+| populate field | Project or Deal Type | with | Active |
+| populate field | Project or Deal Name | with | Example USRE Deal |
+| populate field | Business Purpose | with | Automated test for ELM |
+| populate field | Primary Fund | with | Carlyle Europe Real Estate Partners |
+| populate field | [1] | in section | Comments | with | Request by a requestor of Real Assets |
+*!
+
+!*** Submit form and logout
+|script                |
+|click on button|Submit for Approval|
+| logout |
+***!
+
+
+!*** Login information
+| script                                                          |
+|login with username|elm.ba.fund.ra.realestate|and password|Carlyle1|
+| wait for | +10 seconds |
+***!
+
+!*** Open Tasks
+| script |
+| click on menu | Tasks |
+| verify task | Approve New Legal Entity| is present |
+| click on task| Approve New Legal Entity |
+*!
+
+!*** Input Data
+| script                |
+| click on button|Accept|
+| populate field | [1] | in section | Review Comments | with | Approved by Fund RA - Real Estate (Automated test) |
+***!
+
+!*** Submit form and logout
+| script |
+| click on button | Approve |
+| click on button | Yes |
+
+***!

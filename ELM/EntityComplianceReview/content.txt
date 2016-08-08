@@ -1,0 +1,6 @@
+!*** Open Tasks for Compliance Review
+| script |
+| login with role | role.elm_entity_compliance_reviewer |
+| Entity Compliance Review |  Automated Test | Comment | Entity Compliance Review (Automated Test) |
+***!
+
