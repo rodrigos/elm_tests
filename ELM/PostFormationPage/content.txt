@@ -1,0 +1,11 @@
+!*** Open Tasks for Post Formation Documents
+| script |
+| login with role | role.elm_requestor |
+| click on menu | Tasks |
+| verify task | Automated Test | is present |
+| click on task| Automated Test |
+| Add Formation Documents |  C:\AutomatedTesting\FitNesseRoot\ELM\Files\FormationDocumentSample.txt | Comment | Formation Document added  by a requestor of Real Assets |
+| Add Formation Documents - Operating Agreement |  C:\AutomatedTesting\FitNesseRoot\ELM\Files\FormationDocumentSample.txt | Comment | Operating Agreement added by a requestor of Real Assets |
+| click on button | Submit  |
+*!
+

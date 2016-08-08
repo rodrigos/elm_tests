@@ -1,0 +1,68 @@
+!*** Request New legal Entity
+| script |
+| login with role | role.elm_requestor |
+| Create New Legal Entity | Legal Entity $randString - Automated Test |
+| logout |
+***!
+
+!*** Approve Legal Entity
+| script |
+| login with role | role.elm_business_approver |
+| Approve New Legal Entity | Review New Legal Entity Request - Legal Entity $randString - Automated Test| text | Approved by Fund RA - Real Estate (Automated test) |
+| logout |
+***!
+
+!*** Open Tasks for Post Formation Documents
+| script |
+| login with role | role.elm_requestor |
+| click on menu | Tasks |
+| verify task | $randString - Automated Test | is present |
+| click on task| $randString - Automated Test |
+| Add Formation Documents |  C:\AutomatedTesting\FitNesseRoot\ELM\Files\FormationDocumentSample.txt | Comment | Formation Document added (Automated Test) |
+| Add Formation Documents - Operating Agreement |  C:\AutomatedTesting\FitNesseRoot\ELM\Files\OperatingAgreementSample.txt | Comment | Operating Agreement added (Automated Test) |
+| click on button | Submit  |
+| logout |
+*!
+
+!*** Open Tasks for Legal Compliance Review
+| script |
+| login with role | role.elm_legal_compliance_reviewer |
+| Legal Compliance Review |  Formation Document - Legal Entity $randString  | Comment | Legal Compliance Review - Formation Document (Automated Test) |
+| Legal Compliance Review Task Assigned |  Operating Agreement - Legal Entity $randString | Comment | Legal Compliance Review - Operating Agreement (Automated Test) |
+| logout |
+***!
+
+!*** Open Tasks for Entity Compliance Review
+| script |
+| login with role | role.elm_entity_compliance_reviewer |
+| Entity Compliance Review |  $randString - Automated Test | Comment | Entity Compliance Review (Automated Test) |
+| logout |
+***!
+
+!*** Open Tasks for Consolidation Review
+| script |
+| login with role | role.elm_consolidation_reviewer |
+| Consolidation Review |  $randString - Automated Test | Consolidation | Yes - Phase 1 | Amendedagreement | Yes | Comment | Consolidation Review (Automated Test) |
+| logout |
+***!
+
+!*** Open Tasks for Accounting Review
+| script |
+| login with role | role.elm_accounting_owner |
+| Accounting Review | $randString - Automated Test  | Systemofrecord | Excel | Reportingcurrency | US Dollar | Administratorpoc | $randString | Comment | Accounting Review (Automated Test) |
+| logout |
+***!
+
+!*** Open Tasks for Tax Review
+| script |
+| login with role | role.elm_tax_approver |
+| Tax Review and Sign-Off | $randString - Automated Test | Assignmentrequired | Yes | Siloassignment | Silo 1 | Silorationale | $randString | Taxhierarchy | Not Applicable | Taxclassificationcountry | Corporation | Taxclassificationdefault | Corporation | Taxclassificationintended | Corporation | Comment | Tax Review and Sign-Off (Automated Test) |
+| logout |
+***!
+
+!*** Open Tasks for Tax Silo Review
+| script |
+| login with role | role.elm_tax_silo_reviewer |
+| Review Tax Silo Selection | $randString - Automated Tes | Comment | Review Tax Silo Selection (Automated Test) |
+| logout |
+***!
